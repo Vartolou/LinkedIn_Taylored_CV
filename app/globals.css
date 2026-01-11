@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --linkedin-blue: #0a66c2;
+  --linkedin-dark: #001d3d;
+  --linkedin-darker: #000f21;
+}
+
+body {
+  background: linear-gradient(135deg, #001d3d 0%, #000f21 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-primary {
+    @apply bg-linkedin-500 hover:bg-linkedin-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply glass-effect hover:bg-white/10 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+}
